@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src": ["src"],
+      "src/*": ["src/*"],
+      "web/*": ["web/*"]
+    },
+    "outDir": "build/web",
+    "target": "es6",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "jsx": "react",
+    "allowJs": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["web/index.tsx", "src/**/*"],
+  "exclude": ["test.ts", "**/*.spec.ts"]
+}
