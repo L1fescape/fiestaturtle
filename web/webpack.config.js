@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const root = path.resolve(__dirname, '..')
@@ -43,6 +44,11 @@ module.exports = {
       filename: isDev ? '[id].[contenthash].css' : '[id].css',
       chunkFilename: isDev ? '[name].[contenthash].css' : '[name].css',
     }),
+    new CopyWebpackPlugin([{
+      from: path.resolve(web, 'public'),
+      to: dist,
+      flatten: true,
+    }]),
     ...(isDev
       ? [
           new webpack.SourceMapDevToolPlugin({
