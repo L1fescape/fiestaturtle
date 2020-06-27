@@ -17,7 +17,8 @@
     "tools": "yarn tools:clean && yarn tools:firefox",
     "tools:clean": "rimraf tools/ && mkdir -p tools/",
     "tools:firefox": "wget -O tools/react-dev-tools.xpi https://addons.mozilla.org/firefox/downloads/file/3478747/react_developer_tools-4.4.0-fx.xpi",
-    "github": "yarn build && cp web/CNAME build/web && cd build/web && git co ghpages && git add -A . && git ci -m 'new release' && git push origin ghpages"
+    "github": "yarn gh-pages", 
+    "gh-pages": "yarn build && git co gh-pages && cp build/web/* . && git add `ls build/web` && git ci -m 'new release' && git push origin gh-pages && git co master"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
