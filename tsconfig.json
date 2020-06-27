@@ -4,6 +4,7 @@
     "paths": {
       "src": ["src"],
       "src/*": ["src/*"],
+      "server/*": ["server/*"],
       "web/*": ["web/*"]
     },
     "outDir": "build/web",
@@ -16,6 +17,6 @@
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["web/index.tsx", "src/**/*"],
+  "include": ["web/index.tsx", "src/**/*", "server/index.ts"],
   "exclude": ["test.ts", "**/*.spec.ts"]
 }

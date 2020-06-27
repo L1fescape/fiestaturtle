@@ -1,5 +1,9 @@
 import { Song, Queue } from 'src/models'
 
+export function getPlaylists(): Promise<string[]> {
+  return fetch('/api/playlists').then(resp => resp.json())
+}
+
 export function getSongID(song: Song): string {
   return btoa(`${song.artist}${song.title}`)
 }
