@@ -1,4 +1,4 @@
-.app{display:flex;flex-direction:column;min-height:100vh}.main{display:flex;flex-grow:1}.player-container{background:#242424;padding:0.5rem 1rem}.browser-container{padding:0 1rem;flex:3}.menu-container{display:none;flex:0;background:#242424;padding:1rem}.menu-container.open{flex:1;display:flex}.menu{cursor:pointer}
+.app{display:flex;flex-direction:column;min-height:100vh;justify-content:center;align-items:center;font-size:4rem;letter-spacing:0.5rem}.main{display:flex;flex-grow:1}.player-container{background:#242424;padding:0.5rem 1rem}.browser-container{padding:0 1rem;flex:3}.menu-container{display:none;flex:0;background:#242424;padding:1rem}.menu-container.open{flex:1;display:flex}.menu{cursor:pointer}
 
 .browser{display:flex;flex-direction:column}.song{display:flex;flex-direction:row;padding:0.5rem 0;border-bottom:1px solid black}.info{padding:0 1rem}
 
